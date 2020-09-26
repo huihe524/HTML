@@ -1,0 +1,579 @@
+body {
+	background: rgb(255, 255, 255) url('bg.jpg') no-repeat fixed center -10px;
+}
+
+.mainDiv {
+	width: 1200px;
+	height: 1388px;
+	margin: 0px auto;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 111px;
+	position: relative;
+}
+
+
+.topLine {
+	border-top: 7px solid #1287b4;
+}
+
+.topDiv {
+	border: 0px none;
+	padding: 0px;
+	font-size: 100%;
+	margin: auto;
+	font-family: inherit;
+	font-weight: normal;
+	color: rgb(68, 68, 68);
+	line-height: 20px;
+	position: relative;
+	line-height: 20px;
+}
+
+
+.inbox {
+	margin: auto;
+	width: 1000px;
+	min-width: 320px;
+}
+
+
+}
+
+.topsearch {
+	position: relative;
+	top: -6px;
+	left: 34px;
+	z-index: 4;
+	font-family: "微软雅黑";
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	content: "";
+}
+
+.searchone {
+	float: right;
+	margin-right: 30px;
+	position: relative;
+	top: 16px;
+	right: 4px;
+}
+
+
+
+
+
+.tdhssk {
+	padding: 6px 0px 5px;
+	text-align: left;
+	border: 0px none;
+	font-size: 100%;
+	margin: 0px;
+	font-family: inherit;
+	font-weight: normal;
+}
+
+.searchBoxFont {
+	color: #2d80b6;
+	text-align: right;
+	font-size: 80%;
+	margin-top: 27px;
+	margin-right: 120px;
+	font-family: inherit;
+	font-weight: normal;
+}
+
+.sbox {
+	weight: auto;
+	color: #2d80b6;
+	text-align: right;
+	height: 33px;
+	font-size: 88%;
+	margin-top: 0px;
+	margin-right: 100px;
+	font-family: inherit;
+	font-weight: normal;
+}
+
+.sboxposition {
+	color: #2d80b6;
+	text-align: left;
+	height: 30px;
+	font-size: 88%;
+	margin-top: -22px;
+	margin-right: 0px;
+	font-family: inherit;
+	font-weight: normal;
+}
+
+.btn {
+	background: url('hd/s.JPG') no-repeat 2px 4px #2d80b6;
+	height: 30px;
+	width: 30px;
+	padding: 0px 3px;
+	line-height: 25px;
+	text-align: center;
+	border: 0px none;
+	float: right;
+	font-size: 0px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+}
+
+.daohang {
+	position: relative;
+	margin-left: 380px;
+	font-size: 15px;
+	text-align: center;
+	font-family: "微软雅黑";
+}
+
+#sddm {
+	margin: 0 auto;
+	padding: 0;
+	z-index: 30;
+	background-color: none;
+	width: auto;
+	height: 30px;
+	overflow: hidden;
+	z-index: 5;
+}
+
+#sddm li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font-family: "微软雅黑";
+	z-index: 6;
+}
+
+#sddm li a {
+	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 10px;
+	width: 60px;
+	background: none;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	z-index: 7;
+}
+
+#sddm li a:hover {
+	background: #49A3FF
+}
+
+#sddm div {
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: none;
+}
+
+#sddm div a {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #EAEBD8;
+	color: #2875DE;
+	font-family: "微软雅黑";
+}
+
+#sddm div a:hover {
+	background: #49A3FF;
+	color: #FFF
+}
+
+#frame {
+/*----------图片轮播相框容器----------*/
+	position: relative;
+ /*--绝对(xxxxx)定位，方便子元素的定位*/
+	width: 1000px;
+	height: 316px;
+	margin: 0 auto;
+	padding: 0px 0px 0 0px;
+	overflow: hidden;
+/*--相框作用，只显示一个图片---*/
+	background: #1287b4;
+	border-radius: 5px;
+	margin-top: 16px;
+}
+
+#dis {
+/*--绝对定位方便li图片简介的自动分布定位---*/
+	position: relative;
+	left: -50px;
+	top: -10px;
+	opacity: 0.5;
+}
+
+#photos img {
+	float: left;
+	width: 1000px;
+	height: 316px;
+}
+
+#photos {
+/*---设置总的图片宽度--通过位移来达到轮播效果----*/
+	position: relative;
+	z-index: 9px;
+	width: calc(1000px * 5);
+/*---修改图片数量的话需要修改下面的动画参数*/
+}
+
+.play {
+	animation: ma 20s ease-out infinite alternate;
+/**/
+}
+
+@keyframes ma {
+/*---每图片切换有两个阶段：位移切换和静置。中间的效果可以任意定制----*/
+	0%,20% {
+		margin-left: 0px;
+	}
+
+	25%,40% {
+		margin-left: -1000px;
+	}
+
+	45%,60% {
+		margin-left: -2000px;
+	}
+
+	65%,80% {
+		margin-left: -3000px;
+	}
+
+	85%,100% {
+		margin-left: -4000px;
+	}
+}
+
+#a1:hover ~ #photos {
+	animation: ma1 .5s ease-out forwards;
+}
+
+#a2:hover ~ #photos {
+	animation: ma2 .5s ease-out forwards;
+}
+
+#a3:hover ~ #photos {
+	animation: ma3 .5s ease-out forwards;
+}
+
+#a4:hover ~ #photos {
+	animation: ma4 .5s ease-out forwards;
+}
+
+#a5:hover ~ #photos {
+	animation: ma5 .5s ease-out forwards;
+}
+
+@keyframes ma1 {
+	0% {
+		margin-left: -1200px;
+	}
+
+	100% {
+		margin-left: -0px;
+	}
+}
+
+@keyframes ma2 {
+	0% {
+		margin-left: -1200px;
+	}
+
+	100% {
+		margin-left: -300px;
+	}
+}
+
+@keyframes ma3 {
+	100% {
+		margin-left: -600px;
+	}
+}
+
+@keyframes ma4 {
+	100% {
+		margin-left: -900px;
+	}
+}
+
+@keyframes ma5 {
+	100% {
+		margin-left: -1200px;
+	}
+}
+
+.zhongkuang {
+	width: 1200px;
+	height: 560px;
+	margin: 0px auto;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 20px;
+	position: relative;
+}
+
+.leftboxtxt {
+	width: 485.1px;
+	padding-left: 100px;
+	float: left;
+}
+
+.newstop {
+	width: 485.1px;
+	height: 42px;
+	position: relative;
+}
+
+.newsmore {
+	position: absolute;
+	top: 18px;
+	right: 0px;
+	font-size: 1.2em;
+	color: #2BA6CB;
+	font-weight: bold;
+}
+
+.lanbt {
+	width: 304px;
+	height: 42PX;
+	border: 1px none;
+	font-size: 100%;
+	margin: 0px;
+	margin-bottom: 0px;
+	font-family: inherit;
+	font-weight: normal;
+	color: rgb(68, 68, 68);
+	line-height: 20px;
+}
+
+.hdyw {
+	cursor: default;
+	color: #17479E;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	border-top: 1px solid #17479E;
+	border-left: 1px solid #17479E;
+	border-right: 1px solid #17479E;
+	font-weight: bold;
+	display: block;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 150px;
+	text-decoration: none;
+	margin: 0px;
+	font-family: inherit;
+	list-style: none outside none;
+	float: left;
+}
+
+.zhxw {
+	cursor: default;
+	color: #17479E;
+	border-bottom: 1px solid #17479E;
+	font-weight: bold;
+	display: block;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 150px;
+	text-decoration: none;
+	margin-left: 0px;
+	font-family: inherit;
+	list-style: none outside none;
+	float: right;
+}
+
+
+
+
+
+.newspic {position:relative;
+margin:0;
+	width:485px;
+height:130px;
+}
+
+
+.newslist {
+	width: 485px;
+	border: 1px solid gray;
+	padding: 0;
+	margin: 0px;
+}
+
+
+.newslist ul {
+	padding: 5px 10px;
+	background: white;
+}
+
+.newslist ul li {
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed gray;
+	text-indent: 15px;
+	font-size: 14px;
+	background: url(img/tb.gif) no-repeat center left;
+}
+
+.newslist a {
+	text-decoration: none;
+	color: #06C;
+}
+
+.newslist a:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+.rightboxtxt {
+	position: relative;
+	width: 485.1px;
+	padding-right: 100px;
+	float: right;
+	margin-bottom:20px;
+}
+
+.rightbboxtxt {
+	position: relative;
+	width: 485.1px;
+	padding-right: 100px;
+	float: right;
+	padding-top:24px;
+}
+.footer {
+	width: 1200px;
+	height: 300px;
+	background-color: #e0e0e0;
+}
+
+.footer .footWrap {
+	background: none repeat scroll 0% 0% rgb(224, 224, 224);
+	padding: 40px 0px;
+}
+
+.footer .footWrap1 {
+	background: none repeat scroll 0% 0% rgb(224, 224, 224);
+	padding: 10px 0px;
+}
+
+.footer .footWrap li {
+	width: 125px;
+	float: left;
+	list-style: none;
+	font-size:80%;
+}
+
+.footer .footWrap h4 {
+	padding-bottom: 8px;
+}
+
+.footer .footWrap h4 a {
+	font-size: 15px;
+	color: rgb(34, 19, 45);
+}
+
+.footer .footWrap h4 a:hover {
+	color: rgb(79, 96, 140);
+}
+
+.footer .footWrap a {
+	color: rgb(88, 88, 88);
+	display: block;
+	line-height: 24px;
+	text-align: center;
+}
+
+.footer .footWrap a:hover {
+	color: rgb(79, 96, 140);
+}
+
+.bottombox {
+	width: 1022px;
+	height: 100px;
+	background-color: #17479e;
+	padding-top: 50px;
+	padding-left: 90px;
+	padding-right: 90px;
+	font-size:80%;
+}
+
+.bottomboxinbox {
+	width: 1000;
+	height: 100;
+	float: center;
+	position: relative;
+	margin-top: -20px;
+}
+	
+
+}
+
+.bottombox .bottomboxinbox .info {
+	float: center;
+}
+
+.bottombox .bottomboxinbox .info span {
+	padding-right: 24px;
+}
+
+.bottombox .bottomboxinbox .icp {
+	float: right;
+}
+
+.bottombox .bottomboxinbox .copy {
+	color: #C8C8C8;
+	display: block;
+}
+
+.bottombox .copy a {
+	color: #C8C8C8;
+}
+
+.bottomboxinbox p {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	margin: 0px 0px 0px 5px;
+	color: #939393;
+	cursor: pointer
+}
+
+.bakpng {
+	float: left;
+}
+
+.bulepng {
+}
+
+.logo {
+	position: relative;
+	top: 34px;
+	right: 8px;
+	float: left;
+	width: 320px;
+	height: 86px;
+	padding-left: 100px;
+}
